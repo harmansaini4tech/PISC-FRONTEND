@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h2>My Calculator</h2>
+      <form id="calcForm">
+        <label for="number1">Number 1:</label>
+        <input type="number" id="number1" name="number1" required />
+
+        <label for="number2">Number 2:</label>
+        <input type="number" id="number2" name="number2" required />
+
+        <div class="button-group">
+          <button type="button" onclick="calculate('add')">Add</button>
+          <button type="button" onclick="calculate('sub')">Subtract</button>
+          <button type="button" onclick="calculate('mul')">Multiply</button>
+          <button type="button" onclick="calculate('div')">Divide</button>
+        </div>
+      </form>
+
+      <div id="output-section">
+        <span>Output: <span id="output"></span></span>
+        
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
