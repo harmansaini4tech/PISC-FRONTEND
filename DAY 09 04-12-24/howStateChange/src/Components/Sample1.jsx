@@ -1,21 +1,38 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
+import Sample2 from "./Sample2"
+export default class Sample1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      data: <p>My name is harman</p>,
+    };
+  }
 
-const Sample1 = () => {
-  const [Sample1data, setSample1data] = useState();
+  componentDidMount(){
+    console.log("mounted")
+  }
 
-  const name = <p className="text-2xl">My name is Harman.</p>;
+  componentDidUpdate(){
+    console.log("updated")
+  }
 
-  return (
-    <>
-      <span>{Sample1data}</span>
-      <button
-        onClick={() => setSample1data(name)}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Get my name
-      </button>
-    </>
-  );
-};
+  componentWillUnmount(){
+    console.log("unmounted")
+  }
 
-export default Sample1;
+  changeMyName = () => {
+    this.setState({ name: this.state.data });
+  };
+
+
+  render() {
+    return (
+      <>
+        <span> {this.state.name}</span>
+        <button onClick={() => this.changeMyName()} className="bg-blue-400 rounded mt-4 ml-3">Get my name </button>
+        <Sample2 ></Sample2>
+      </>
+    );
+  }
+}
