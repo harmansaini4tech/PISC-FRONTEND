@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DisplayCount from "./DisplayCount";
 
 export default class Counter extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +18,7 @@ export default class Counter extends Component {
     return (
       <div className="m-5">
         <DisplayCount number={this.state.count}></DisplayCount>
-        
+
         <button
           className="bg-green-300 rounded p-2"
           onClick={() => this.increment(this)}

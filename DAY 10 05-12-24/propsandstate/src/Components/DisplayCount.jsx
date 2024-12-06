@@ -5,7 +5,7 @@ export default class DisplayCount extends Component {
     message: "Click on button",
   };
 
-  render(props) {
+  render() {
     return (
       <div>
         {!this.props.number ? (
